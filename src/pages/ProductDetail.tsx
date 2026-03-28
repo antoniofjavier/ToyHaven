@@ -13,8 +13,8 @@ export const ProductDetail = () => {
   if (!product) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-24 text-center">
-        <h1 className="text-4xl font-display font-black mb-4">Toy Not Found</h1>
-        <Link to="/shop" className="text-primary font-bold hover:underline">Back to Shop</Link>
+        <h1 className="text-4xl font-display font-black mb-4">Juguete No Encontrado</h1>
+        <Link to="/shop" className="text-primary font-bold hover:underline">Volver a la Tienda</Link>
       </div>
     );
   }
@@ -59,7 +59,7 @@ export const ProductDetail = () => {
                   />
                 ))}
               </div>
-              <span className="text-sm font-bold text-ink/40">{product.reviews} Customer Reviews</span>
+              <span className="text-sm font-bold text-ink/40">{product.reviews} Reseñas de Clientes</span>
             </div>
             <h1 className="text-5xl font-display font-black text-ink mb-4 leading-tight">
               {product.name}
@@ -68,7 +68,7 @@ export const ProductDetail = () => {
               <span className="text-4xl font-black text-primary">${product.price}</span>
               {product.isBestSeller && (
                 <span className="bg-accent text-ink text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full">
-                  Bestseller
+                  Más Vendido
                 </span>
               )}
             </div>
@@ -79,7 +79,7 @@ export const ProductDetail = () => {
           </p>
 
           <div className="space-y-4">
-            <h3 className="font-display font-bold text-lg">Key Benefits:</h3>
+            <h3 className="font-display font-bold text-lg">Beneficios Clave:</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {product.benefits.map((benefit) => (
                 <li key={benefit} className="flex items-center gap-3 text-ink/70">
@@ -95,13 +95,13 @@ export const ProductDetail = () => {
           <div className="p-8 bg-white rounded-[40px] border border-ink/5 space-y-8">
             <div className="flex items-center justify-between">
               <div>
-                <span className="block text-sm font-bold text-ink/40 uppercase tracking-widest mb-1">Age Range</span>
-                <span className="text-xl font-display font-bold">{product.ageRange} Years</span>
+                <span className="block text-sm font-bold text-ink/40 uppercase tracking-widest mb-1">Rango de Edad</span>
+                <span className="text-xl font-display font-bold">{product.ageRange} Años</span>
               </div>
               <div className="text-right">
-                <span className="block text-sm font-bold text-ink/40 uppercase tracking-widest mb-1">Stock Status</span>
+                <span className="block text-sm font-bold text-ink/40 uppercase tracking-widest mb-1">Estado de Stock</span>
                 <span className={`text-xl font-display font-bold ${product.stock < 10 ? 'text-primary' : 'text-secondary'}`}>
-                  {product.stock < 10 ? `Only ${product.stock} left!` : 'In Stock'}
+                  {product.stock < 10 ? `¡Solo quedan ${product.stock}!` : 'En Stock'}
                 </span>
               </div>
             </div>
@@ -112,7 +112,7 @@ export const ProductDetail = () => {
                 className="flex-1 bg-primary hover:bg-primary/90 text-white px-8 py-6 rounded-3xl font-bold text-lg transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 active:scale-95"
               >
                 <ShoppingCart className="w-6 h-6" />
-                Add to Cart
+                Añadir al Carrito
               </button>
               <button className="p-6 bg-white hover:bg-ink/5 border border-ink/10 rounded-3xl transition-all">
                 <Heart className="w-6 h-6 text-ink/40" />
@@ -127,15 +127,15 @@ export const ProductDetail = () => {
           <div className="grid grid-cols-3 gap-4 pt-8 border-t border-ink/5">
             <div className="text-center space-y-2">
               <ShieldCheck className="w-6 h-6 text-secondary mx-auto" />
-              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Safe Toys</span>
+              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Juguetes Seguros</span>
             </div>
             <div className="text-center space-y-2">
               <Truck className="w-6 h-6 text-accent mx-auto" />
-              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Fast Delivery</span>
+              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Envío Rápido</span>
             </div>
             <div className="text-center space-y-2">
               <RotateCcw className="w-6 h-6 text-primary mx-auto" />
-              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Easy Returns</span>
+              <span className="block text-[10px] font-black uppercase tracking-widest text-ink/40">Devolución Fácil</span>
             </div>
           </div>
         </div>

@@ -10,14 +10,14 @@ export const Footer = () => {
           <div className="space-y-8">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-display font-black text-xl">
-                T
+                C
               </div>
               <span className="text-2xl font-display font-black tracking-tight text-ink">
-                Toy<span className="text-primary">Haven</span>
+                Canela
               </span>
             </Link>
             <p className="text-ink/60 leading-relaxed">
-              We believe in the power of play. Our curated toys are designed to spark imagination, encourage learning, and create lasting memories.
+              Creemos en el poder del juego. Nuestros juguetes están diseñados para despertar la imaginación, fomentar el aprendizaje y crear recuerdos duraderos.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 bg-ink/5 rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all">
@@ -33,43 +33,43 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-8">Shop by Age</h4>
+            <h4 className="font-display font-bold text-lg mb-8">Comprar por Edad</h4>
             <ul className="space-y-4">
-              <li><Link to="/shop?age=0-2" className="text-ink/60 hover:text-primary transition-colors">0-2 Years</Link></li>
-              <li><Link to="/shop?age=3-5" className="text-ink/60 hover:text-primary transition-colors">3-5 Years</Link></li>
-              <li><Link to="/shop?age=6-8" className="text-ink/60 hover:text-primary transition-colors">6-8 Years</Link></li>
-              <li><Link to="/shop?age=9+" className="text-ink/60 hover:text-primary transition-colors">9+ Years</Link></li>
+              <li><Link to="/shop?age=0-2" className="text-ink/60 hover:text-primary transition-colors">0-2 Años</Link></li>
+              <li><Link to="/shop?age=3-5" className="text-ink/60 hover:text-primary transition-colors">3-5 Años</Link></li>
+              <li><Link to="/shop?age=6-8" className="text-ink/60 hover:text-primary transition-colors">6-8 Años</Link></li>
+              <li><Link to="/shop?age=9+" className="text-ink/60 hover:text-primary transition-colors">9+ Años</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-8">Quick Links</h4>
+            <h4 className="font-display font-bold text-lg mb-8">Enlaces Rápidos</h4>
             <ul className="space-y-4">
-              <li><Link to="/shop" className="text-ink/60 hover:text-primary transition-colors">Shop All</Link></li>
-              <li><Link to="/about" className="text-ink/60 hover:text-primary transition-colors">Our Story</Link></li>
-              <li><Link to="/contact" className="text-ink/60 hover:text-primary transition-colors">Contact Us</Link></li>
-              <li><Link to="/faq" className="text-ink/60 hover:text-primary transition-colors">FAQs</Link></li>
-              <li><Link to="/blog" className="text-ink/60 hover:text-primary transition-colors">Play Blog</Link></li>
+              <li><Link to="/shop" className="text-ink/60 hover:text-primary transition-colors">Ver Todo</Link></li>
+              <li><Link to="/about" className="text-ink/60 hover:text-primary transition-colors">Nuestra Historia</Link></li>
+              <li><Link to="/contact" className="text-ink/60 hover:text-primary transition-colors">Contacto</Link></li>
+              <li><Link to="/faq" className="text-ink/60 hover:text-primary transition-colors">Preguntas Frecuentes</Link></li>
+              <li><Link to="/blog" className="text-ink/60 hover:text-primary transition-colors">Blog de Juego</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-8">Customer Care</h4>
+            <h4 className="font-display font-bold text-lg mb-8">Atención al Cliente</h4>
             <ul className="space-y-4">
-              <li><Link to="/shipping" className="text-ink/60 hover:text-primary transition-colors">Shipping Info</Link></li>
-              <li><Link to="/returns" className="text-ink/60 hover:text-primary transition-colors">Returns & Exchanges</Link></li>
-              <li><Link to="/privacy" className="text-ink/60 hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-ink/60 hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link to="/shipping" className="text-ink/60 hover:text-primary transition-colors">Información de Envío</Link></li>
+              <li><Link to="/returns" className="text-ink/60 hover:text-primary transition-colors">Devoluciones</Link></li>
+              <li><Link to="/privacy" className="text-ink/60 hover:text-primary transition-colors">Privacidad</Link></li>
+              <li><Link to="/terms" className="text-ink/60 hover:text-primary transition-colors">Términos de Servicio</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-12 border-t border-ink/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-ink/40 text-sm font-semibold">
-            © 2026 ToyHaven Store. All rights reserved.
+            © 2026 Canela. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-2 text-ink/40 text-sm font-semibold">
-            Made with <Heart className="w-4 h-4 text-primary fill-primary" /> for kids everywhere
+            Hecho con <Heart className="w-4 h-4 text-primary fill-primary" /> para niños de todo el mundo
           </div>
         </div>
       </div>

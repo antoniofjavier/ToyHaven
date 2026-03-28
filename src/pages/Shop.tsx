@@ -10,18 +10,18 @@ export const Shop = () => {
   const initialAge = searchParams.get('age');
   const initialFilter = searchParams.get('filter');
 
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [selectedAge, setSelectedAge] = useState<string>(initialAge || 'All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
+  const [selectedAge, setSelectedAge] = useState<string>(initialAge || 'Todos');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('featured');
 
-  const categories = ['All', ...new Set(products.map((p) => p.category))];
-  const ages = ['All', '0-2', '3-5', '6-8', '9+'];
+  const categories = ['Todos', ...new Set(products.map((p) => p.category))];
+  const ages = ['Todos', '0-2', '3-5', '6-8', '9+'];
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {
-      const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
-      const matchesAge = selectedAge === 'All' || p.ageRange.includes(selectedAge);
+      const matchesCategory = selectedCategory === 'Todos' || p.category === selectedCategory;
+      const matchesAge = selectedAge === 'Todos' || p.ageRange.includes(selectedAge);
       const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            p.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesFilter = !initialFilter || 
@@ -41,8 +41,8 @@ export const Shop = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
         <div>
-          <h1 className="text-4xl font-display font-black text-ink mb-2">Shop All Toys</h1>
-          <p className="text-ink/60">{filteredProducts.length} products found</p>
+          <h1 className="text-4xl font-display font-black text-ink mb-2">Todos los Juguetes</h1>
+          <p className="text-ink/60">{filteredProducts.length} productos encontrados</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-4">
@@ -50,7 +50,7 @@ export const Shop = () => {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink/30" />
             <input
               type="text"
-              placeholder="Search toys..."
+              placeholder="Buscar juguetes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-white rounded-2xl border border-ink/10 focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -61,10 +61,10 @@ export const Shop = () => {
             onChange={(e) => setSortBy(e.target.value)}
             className="bg-white px-6 py-4 rounded-2xl border border-ink/10 font-bold text-sm focus:outline-none"
           >
-            <option value="featured">Featured</option>
-            <option value="low-high">Price: Low to High</option>
-            <option value="high-low">Price: High to Low</option>
-            <option value="rating">Top Rated</option>
+            <option value="featured">Destacados</option>
+            <option value="low-high">Precio: Menor a Mayor</option>
+            <option value="high-low">Precio: Mayor a Menor</option>
+            <option value="rating">Mejor Valorados</option>
           </select>
         </div>
       </div>
@@ -74,7 +74,7 @@ export const Shop = () => {
         <aside className="lg:w-64 space-y-10">
           <div>
             <h3 className="text-lg font-display font-bold mb-6 flex items-center gap-2">
-              <Filter className="w-5 h-5" /> Categories
+              <Filter className="w-5 h-5" /> Categorías
             </h3>
             <div className="space-y-2">
               {categories.map((cat) => (
@@ -94,7 +94,7 @@ export const Shop = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-display font-bold mb-6">Shop by Age</h3>
+            <h3 className="text-lg font-display font-bold mb-6">Comprar por Edad</h3>
             <div className="grid grid-cols-2 gap-2">
               {ages.map((age) => (
                 <button
@@ -106,7 +106,7 @@ export const Shop = () => {
                       : 'border-ink/10 hover:border-primary text-ink/70'
                   }`}
                 >
-                  {age}
+                  {age === 'Todos' ? age : `${age} Años`}
                 </button>
               ))}
             </div>
@@ -131,16 +131,16 @@ export const Shop = () => {
                 animate={{ opacity: 1 }}
                 className="text-center py-24 bg-white rounded-[40px] border border-dashed border-ink/20"
               >
-                <p className="text-xl font-display font-bold text-ink/40">No toys found matching your filters.</p>
+                <p className="text-xl font-display font-bold text-ink/40">No se encontraron juguetes con estos filtros.</p>
                 <button
                   onClick={() => {
-                    setSelectedCategory('All');
-                    setSelectedAge('All');
+                    setSelectedCategory('Todos');
+                    setSelectedAge('Todos');
                     setSearchQuery('');
                   }}
                   className="mt-6 text-primary font-bold hover:underline"
                 >
-                  Clear all filters
+                  Limpiar todos los filtros
                 </button>
               </motion.div>
             )}

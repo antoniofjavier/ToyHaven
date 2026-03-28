@@ -9,11 +9,11 @@ export const Navbar = () => {
   const { totalItems } = useCart();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Shop All', path: '/shop' },
-    { name: 'Best Sellers', path: '/shop?filter=best-sellers' },
-    { name: 'New Arrivals', path: '/shop?filter=new' },
-    { name: 'About', path: '/about' },
+    { name: 'Inicio', path: '/' },
+    { name: 'Tienda', path: '/shop' },
+    { name: 'Más Vendidos', path: '/shop?filter=best-sellers' },
+    { name: 'Novedades', path: '/shop?filter=new' },
+    { name: 'Nosotros', path: '/about' },
   ];
 
   return (
@@ -23,10 +23,10 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-display font-black text-xl">
-              T
+              C
             </div>
             <span className="text-2xl font-display font-black tracking-tight text-ink">
-              Toy<span className="text-primary">Haven</span>
+              Canela
             </span>
           </Link>
 
